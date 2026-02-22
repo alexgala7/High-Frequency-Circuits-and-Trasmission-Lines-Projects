@@ -42,7 +42,7 @@ The core of the project involves the optimization of a **Triple-Stub Tuner** to 
 
 | File | Context | Description |
 | :--- | :--- | :--- |
-| `res1.m` | Ex. 1.2a | Frequency response and |Gamma| plots. |
+| `res1.m` | Ex. 1.2a | Frequency response and abs(Gamma) plots. |
 | `res2.m` | Ex. 1.2b | SWR and Return Loss analysis. |
 | `res3.m` | Ex. 1.2c | Microstrip Filter simulation. |
 | `res4a.m` | Ex. 1.3γ | Power transfer (Shunt Matching). |
