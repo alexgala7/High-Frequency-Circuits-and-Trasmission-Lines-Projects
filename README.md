@@ -56,4 +56,4 @@ The core of the project involves the optimization of a **Triple-Stub Tuner** to 
 
 ### 📂 Technical Documentation
 Detailed mathematical derivations, Smith Charts, and optimization convergence plots are available in the technical report:
-👉 [Technical_Report_Part_A.pdf](Part_A/docs/Report_A.pdf)
+👉 [Report_A.pdf](Part_A/docs/Report_A.pdf)
