@@ -86,7 +86,6 @@ Broadband matching of a complex load $Z_L = 20 - j30 \Omega$ at $5\text{ GHz}$ u
 * **Performance:** Frequency sweeps ($0-10\text{ GHz}$) confirmed that the solution with longer stub lengths provides a significantly wider bandwidth ($SWR \leq 2$).
 * **Constraint Analysis:** Analyzed the "Forbidden Regions" on the Smith Chart where matching is mathematically impossible for fixed-distance stubs.
 
-![Double Stub SWR](Part_B/images/double_stub_swr.png)
 
 #### 4. Microstrip Resonator & Critical Coupling (Ex. 2.4)
 Design of a $\lambda/2$ microstrip resonator on an FR4 substrate ($h=1.6\text{mm}, \epsilon_r=4.4$) for $2.5\text{ GHz}$ operation.
