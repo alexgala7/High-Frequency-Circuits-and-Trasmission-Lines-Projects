@@ -58,10 +58,6 @@ The core of the project involves the optimization of a **Triple-Stub Tuner** to 
 Detailed mathematical derivations, Smith Charts, and optimization convergence plots are available in the technical report:
 👉 [Report_A.pdf](Part_A/docs/Report_A.pdf)
 
-# High-Frequency Devices & Microwave Circuits Analysis - Part B
-
-This folder contains the analytical derivations, MATLAB implementations, and electromagnetic simulations for the second part of the High-Frequency Devices course (ECE AUTh). The work transitions from circuit-level matching to field theory and antenna design.
-
 ## 📘 Part B: Electromagnetic Fields & Antennas
 
 ### 🔍 Scientific Analysis & Insights
