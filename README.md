@@ -38,6 +38,8 @@ The core of the project involves the optimization of a **Triple-Stub Tuner** to 
     * For **$Z_L = 20 + j30$**: Mean $|\Gamma_{in}| = 0.4747$. Narrow match window (1.76-1.91 GHz).
     * For **$Z_L = 180 - j20$**: Mean $|\Gamma_{in}| = 0.7254$. Physical limitation reached; broadband matching was not feasible for this specific high-impedance load over the large bandwidth.
 
+![Optimization Results](Part_A/images/optimization_plot.png)
+
 ### 💻 MATLAB Source Code Mapping
 
 | File | Context | Description |
