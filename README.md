@@ -77,12 +77,16 @@ Design and analysis of an 8-element linear array of $\lambda/2$ dipoles and a 4-
 * **Geometric Optimization:** For the rectangular array, symbolic solvers identified coordinates $(h_x, h_y)$ to synthesize specific radiation nulls and peaks.
 * **Visualization:** 3D radiation solids were generated using the MATLAB Antenna Array Designer to verify beamforming and grating lobe emergence.
 
+![Antenna Pattern](Part_B/images/radiation_pattern_3d.png)
+
 
 #### 3. Double Stub Impedance Matching (Ex. 2.3)
 Broadband matching of a complex load $Z_L = 20 - j30 \Omega$ at $5\text{ GHz}$ using a double-stub tuner with fixed spacing $d = \lambda/8$.
 * **Optimization:** Used `fsolve` to find the two physical solutions for stub lengths.
 * **Performance:** Frequency sweeps ($0-10\text{ GHz}$) confirmed that the solution with longer stub lengths provides a significantly wider bandwidth ($SWR \leq 2$).
 * **Constraint Analysis:** Analyzed the "Forbidden Regions" on the Smith Chart where matching is mathematically impossible for fixed-distance stubs.
+
+![Double Stub SWR](Part_B/images/double_stub_swr.png)
 
 #### 4. Microstrip Resonator & Critical Coupling (Ex. 2.4)
 Design of a $\lambda/2$ microstrip resonator on an FR4 substrate ($h=1.6\text{mm}, \epsilon_r=4.4$) for $2.5\text{ GHz}$ operation.
