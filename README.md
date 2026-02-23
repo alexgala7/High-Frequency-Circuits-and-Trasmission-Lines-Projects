@@ -57,3 +57,56 @@ The core of the project involves the optimization of a **Triple-Stub Tuner** to 
 ### 📂 Technical Documentation
 Detailed mathematical derivations, Smith Charts, and optimization convergence plots are available in the technical report:
 👉 [Report_A.pdf](Part_A/docs/Report_A.pdf)
+
+# High-Frequency Devices & Microwave Circuits Analysis - Part B
+
+This folder contains the analytical derivations, MATLAB implementations, and electromagnetic simulations for the second part of the High-Frequency Devices course (ECE AUTh). The work transitions from circuit-level matching to field theory and antenna design.
+
+## 📘 Part B: Electromagnetic Fields & Antennas
+
+### 🔍 Scientific Analysis & Insights
+
+#### 1. Dielectric Property Characterization (Ex. 2.1)
+Determination of the relative permittivity ($\epsilon_r$) and loss tangent ($\tan\delta$) of a material using a rectangular waveguide (TE10 mode) at $10\text{ GHz}$.
+* **Methodology:** Input impedance ($Z_{in}$) was measured for two samples with thicknesses $d$ and $2d$. 
+* **Implementation:** The transcendental equation $(\tanh(\gamma d))^2 = k$ was solved using symbolic math in MATLAB to extract the complex propagation constant $\gamma$.
+* **Results:** The material was characterized with $\epsilon_r = 4.46$ and $\tan\delta = 0.2171$, identifying it as a lossy dielectric consistent with standard FR4 properties.
+
+#### 2. Antenna Array Synthesis (Ex. 2.2)
+Design and analysis of an 8-element linear array of $\lambda/2$ dipoles and a 4-element rectangular array.
+* **Array Factor Analysis:** Evaluated radiation patterns for element spacings of $d = \lambda/4, \lambda/2,$ and $3\lambda/4$.
+* **Numerical Directivity:** Calculated $D_{max}$ via numerical integration (Riemann sums) over the $(\theta, \phi)$ power density grid.
+* **Geometric Optimization:** For the rectangular array, symbolic solvers identified coordinates $(h_x, h_y)$ to synthesize specific radiation nulls and peaks.
+* **Visualization:** 3D radiation solids were generated using the MATLAB Antenna Array Designer to verify beamforming and grating lobe emergence.
+
+
+#### 3. Double Stub Impedance Matching (Ex. 2.3)
+Broadband matching of a complex load $Z_L = 20 - j30 \Omega$ at $5\text{ GHz}$ using a double-stub tuner with fixed spacing $d = \lambda/8$.
+* **Optimization:** Used `fsolve` to find the two physical solutions for stub lengths.
+* **Performance:** Frequency sweeps ($0-10\text{ GHz}$) confirmed that the solution with longer stub lengths provides a significantly wider bandwidth ($SWR \leq 2$).
+* **Constraint Analysis:** Analyzed the "Forbidden Regions" on the Smith Chart where matching is mathematically impossible for fixed-distance stubs.
+
+#### 4. Microstrip Resonator & Critical Coupling (Ex. 2.4)
+Design of a $\lambda/2$ microstrip resonator on an FR4 substrate ($h=1.6\text{mm}, \epsilon_r=4.4$) for $2.5\text{ GHz}$ operation.
+* **Geometric Design:** * Calculated microstrip width $W = 3.06\text{mm}$ and effective permittivity $\epsilon_{r,eff} = 3.33$.
+    * Determined physical length $l = 32.88\text{mm}$ for resonance.
+* **Coupling Optimization:** * Solved for the gap capacitance ($C = 0.348\text{ pF}$) required for critical coupling to the $50 \Omega$ feedline.
+    * Accounted for the frequency shift caused by the coupling gap, iteratively re-scaling the resonator length ($l_{new} = 30.27\text{mm}$) to maintain the $2.5\text{ GHz}$ target.
+* **Analytical Validation:** Results were cross-verified using Smith Chart approximations and iterative numerical solvers (`fsolve`).
+
+
+### 💻 MATLAB Source Code Mapping
+
+| File | Exercise | Description |
+| :--- | :--- | :--- |
+| `solve_dielectric_properties.m` | 2.1 | Symbolic solver for $\epsilon_r$ and $\tan\delta$. |
+| `antenna.m` | 2.2a | 2D Polar radiation patterns for linear arrays. |
+| `directivity.m` | 2.2c | Numerical integration for array directivity. |
+| `antenna_d.m` | 2.2d | Rectangular array geometry & pattern synthesis. |
+| `double_stub_tuning.m` | 2.3 | Double-stub matching and bandwidth analysis. |
+
+---
+
+### 📂 Technical Documentation
+Complete mathematical derivations, handwritten solution sets, and 3D simulation exports are located in the documentation folder:
+👉 [Report_B.pdf](Part_B/docs/Report_B.pdf)
